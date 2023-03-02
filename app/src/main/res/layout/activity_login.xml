@@ -2,32 +2,50 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
+        android:gravity="center"
+        android:orientation="vertical"
         >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="江苏省体卫融合控糖健康管理系统"
-            android:gravity="right"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="50dp"
-            android:layout_gravity="center_horizontal"></TextView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="v1.0"
-            android:textSize="20dp"
-            android:gravity="center"
-            ></TextView>
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="江苏省体卫融合控糖健康管理系统"-->
+<!--            android:gravity="right"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="20dp"-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            android:layout_marginLeft="50dp"-->
+<!--            android:layout_gravity="center_horizontal"></TextView>-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:text="v1.0"-->
+<!--            android:textSize="20dp"-->
+<!--            android:gravity="center"-->
+<!--            ></TextView>-->
+<com.xuexiang.xui.widget.imageview.IconImageView
+    android:id="@+id/login_icon"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+
+
+    />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登  录"
+        android:textSize="25dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        />
     </LinearLayout>
 
      <LinearLayout
@@ -36,22 +54,47 @@
          android:layout_height="wrap_content"
          >
 
-         <TextView
-             android:id="@+id/username_info"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="用户名:"
-             android:textSize="15sp"
-             android:textColor="@color/username"
-             android:gravity="left"
-             android:layout_gravity="left">
-         </TextView>
+         <FrameLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
 
-         <EditText
-             android:id="@+id/username"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:hint="请输入用户名"></EditText>
+             <androidx.appcompat.widget.AppCompatImageView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="start|center_vertical"
+                 android:tint="?attr/colorAccent"
+                 app:srcCompat="@drawable/ic_phone" />
+
+             <com.xuexiang.xui.widget.edittext.materialedittext.MaterialEditText
+                 android:id="@+id/et_phone_number"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginStart="36dp"
+                 android:hint="@string/tip_please_input_phone_number"
+                 app:met_clearButton="true"
+                 app:met_errorMessage="@string/tip_phone_number_error"
+                 app:met_floatingLabel="normal"
+                 app:met_floatingLabelText="@string/title_phone_number"
+                 app:met_regexp="@string/regex_phone_number" />
+
+         </FrameLayout>
+
+<!--         <TextView-->
+<!--             android:id="@+id/username_info"-->
+<!--             android:layout_width="wrap_content"-->
+<!--             android:layout_height="wrap_content"-->
+<!--             android:text="用户名:"-->
+<!--             android:textSize="15sp"-->
+<!--             android:textColor="@color/username"-->
+<!--             android:gravity="left"-->
+<!--             android:layout_gravity="left">-->
+<!--         </TextView>-->
+
+<!--         <EditText-->
+<!--             android:id="@+id/username"-->
+<!--             android:layout_width="wrap_content"-->
+<!--             android:layout_height="wrap_content"-->
+<!--             android:hint="请输入用户名"></EditText>-->
 
      </LinearLayout>
 
@@ -61,22 +104,67 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/password_info"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="密码:"
-            android:textSize="15sp"
-            android:textColor="@color/username"
-            android:gravity="left"
-            android:layout_gravity="left">
-        </TextView>
+<!--        <TextView-->
+<!--            android:id="@+id/password_info"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="密码:"-->
+<!--            android:textSize="15sp"-->
+<!--            android:textColor="@color/username"-->
+<!--            android:gravity="left"-->
+<!--            android:layout_gravity="left">-->
+<!--        </TextView>-->
 
-        <EditText
-            android:id="@+id/password"
+<!--        <EditText-->
+<!--            android:id="@+id/password"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="请输入密码"></EditText>-->
+        <FrameLayout
+            android:id="@+id/fl_verify_code"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="请输入密码"></EditText>
+            android:layout_marginTop="12dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:tint="?attr/colorAccent"
+                app:srcCompat="@drawable/ic_password" />
+
+            <com.xuexiang.xui.widget.edittext.materialedittext.MaterialEditText
+                android:id="@+id/et_verify_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:hint="@string/hint_please_input_verify_code"
+                android:inputType="number"
+                app:met_clearButton="false"
+                app:met_errorMessage="@string/tip_verify_code_error"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelText="@string/lab_verify_code"
+                app:met_maxCharacters="4"
+                app:met_regexp="@string/regex_verify_code" />
+
+            <com.xuexiang.xui.widget.button.roundbutton.RoundButton
+                android:id="@+id/btn_get_verify_code"
+                style="@style/RoundButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:paddingStart="10dp"
+                android:paddingTop="3dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="3dp"
+                android:text="@string/action_get_verify_code"
+                android:textColor="@color/selector_round_button_main_theme_color"
+                android:textSize="13sp"
+                app:rb_borderColor="@color/selector_round_button_main_theme_color"
+                app:rb_borderWidth="1.5dp"
+                app:rb_radius="15dp" />
+
+        </FrameLayout>
 
     </LinearLayout>
 

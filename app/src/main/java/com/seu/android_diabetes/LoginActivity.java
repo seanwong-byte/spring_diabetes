@@ -28,6 +28,8 @@ import com.seu.android_diabetes.utils.OkHttpUtils;
 import com.seu.android_diabetes.utils.SharedPreferencesUtil;
 import com.seu.android_diabetes.vo.ServerResponse;
 import com.seu.android_diabetes.vo.UserVO;
+import com.xuexiang.xui.widget.edittext.materialedittext.MaterialEditText;
+import com.xuexiang.xui.widget.imageview.IconImageView;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -41,8 +43,8 @@ import java.sql.SQLException;
  * */
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
-    EditText username_editText ;
-    EditText password_editText;
+    MaterialEditText username_editText ;
+    MaterialEditText password_editText;
     RadioGroup radioGroup;
     RadioButton radioButton1;
     RadioButton radioButton2;
@@ -58,11 +60,17 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         String username = sharedPreferences.getString("username","");
         String password = sharedPreferences.getString("password","");
 
+//设置图标位置
+        IconImageView iconImageView = findViewById(R.id.login_icon);
+        iconImageView.setImageResource(R.mipmap.app_icon);
 
 
-        //获取
-        username_editText=(EditText)findViewById(R.id.username);
-        password_editText=(EditText)findViewById(R.id.password);
+
+
+        //获取手机号和密码
+
+        username_editText=findViewById(R.id.et_phone_number);
+        password_editText=findViewById(R.id.et_verify_code);
 
         username_editText.setText(username);
         password_editText.setText(password);
