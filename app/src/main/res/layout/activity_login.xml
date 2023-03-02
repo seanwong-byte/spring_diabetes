@@ -42,9 +42,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="登  录"
-        android:textSize="30dp"
+        android:textSize="25dp"
         android:layout_marginTop="20dp"
-        android:textColor="#223B53"
+        android:textColor="@color/black"
         />
     </LinearLayout>
 
@@ -56,10 +56,7 @@
 
          <FrameLayout
              android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:layout_marginLeft="20dp"
-             android:layout_marginRight="20dp">
-
+             android:layout_height="wrap_content">
 
              <androidx.appcompat.widget.AppCompatImageView
                  android:layout_width="wrap_content"
@@ -127,9 +124,7 @@
             android:id="@+id/fl_verify_code"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp">
+            android:layout_marginTop="12dp">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="wrap_content"
@@ -176,8 +171,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         >
         <RadioGroup
         android:id="@+id/rg_login"
@@ -190,32 +183,35 @@
             android:layout_height="wrap_content"
             android:id="@+id/patient"
             android:text="患者"
-            android:textSize="12dp"
             />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/doctor"
-            android:textSize="12dp"
             android:text="医生"
             />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/sports_doctor"
-            android:textSize="12dp"
             android:text="运动康复师"
             />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/manager"
-            android:textSize="12dp"
             android:text="管理员"
             />
         </RadioGroup>
 
     </LinearLayout>
+
+     <Button
+         android:id="@+id/login"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="登录"></Button>
+
     <LinearLayout
         android:id="@+id/layout2"
         android:layout_width="wrap_content"
@@ -225,77 +221,19 @@
         android:layout_marginRight="10dp">
 
 
+         <TextView
+             android:id="@+id/forgetpassword"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textSize="15sp"
+             android:text="忘记密码"></TextView>
         <TextView
-            android:id="@+id/forgetpassword"
+            android:id="@+id/register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="12sp"
-            android:textColor="#9FABBC"
-            android:text="忘记密码"
-            android:layout_marginRight="20dp"></TextView>
-<!--        <TextView-->
-<!--            android:id="@+id/register"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginLeft="10dp"-->
-<!--            android:textSize="15sp"-->
-<!--            android:text="注册"></TextView>-->
+            android:layout_marginLeft="10dp"
+            android:textSize="15sp"
+            android:text="注册"></TextView>
     </LinearLayout>
-
-     <com.xuexiang.xui.widget.textview.supertextview.SuperButton
-         android:id="@+id/login"
-         style="@style/SuperButton.Primary.Login"
-         android:layout_marginTop="16dp"
-         android:text="@string/title_login_register"/>
-
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="20dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <CheckBox
-                android:id="@+id/cb_protocol"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleX="0.7"
-                android:scaleY="0.7" />
-
-            <TextView
-                style="@style/TextStyle.Explain"
-                android:layout_width="wrap_content"
-                android:text="@string/agree_protocol"
-                android:textColor="@color/xui_config_color_primary_text" />
-
-            <com.xuexiang.xui.widget.alpha.XUIAlphaTextView
-                android:id="@+id/tv_user_protocol"
-                style="@style/TextStyle.Explain"
-                android:layout_width="wrap_content"
-                android:text="@string/title_user_protocol"
-                android:textColor="?attr/colorAccent" />
-
-            <TextView
-                style="@style/TextStyle.Explain"
-                android:layout_width="wrap_content"
-                android:text="@string/lab_and"
-                android:textColor="@color/xui_config_color_primary_text" />
-
-            <com.xuexiang.xui.widget.alpha.XUIAlphaTextView
-                android:id="@+id/tv_privacy_protocol"
-                style="@style/TextStyle.Explain"
-                android:layout_width="wrap_content"
-                android:text="@string/title_privacy_protocol"
-                android:textColor="?attr/colorAccent" />
-
-        </LinearLayout>
-
-    </FrameLayout>
 
 </LinearLayout>
