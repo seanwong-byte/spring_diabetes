@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/ps_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="-19dp"
+        android:layout_marginBottom="206dp"
+        android:orientation="vertical">
+
+        <!--     <RelativeLayout-->
+        <!--         android:layout_width="wrap_content"-->
+        <!--         android:layout_height="wrap_content">-->
+
+        <!--         <androidx.viewpager.widget.ViewPager-->
+        <!--             android:id="@+id/casouelviewpager"-->
+        <!--             android:layout_width="match_parent"-->
+        <!--             android:layout_height="100dp">-->
+
+        <!--         </androidx.viewpager.widget.ViewPager>-->
+
+        <!--          <LinearLayout-->
+        <!--              android:id="@+id/casouelnav"-->
+        <!--              android:layout_width="wrap_content"-->
+        <!--              android:layout_height="wrap_content"-->
+        <!--              android:layout_alignBottom="@id/casouelviewpager"-->
+        <!--              android:layout_marginBottom="10dp"-->
+        <!--              android:orientation="horizontal">-->
+
+        <!--          </LinearLayout>-->
+
+        <!--         <ListView-->
+        <!--             android:layout_width="match_parent"-->
+        <!--             android:layout_height="match_parent"-->
+        <!--             android:id="@+id/physiologicalIndex"-->
+        <!--             tools:listitem="@layout/pi_listview_item"-->
+        <!--             >-->
+
+
+        <!--         </ListView>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            >
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="血管老化程度:"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:id="@+id/vascular_aging_degree"/>
+
+
+            <EditText
+                android:id="@+id/vascular_aging_degree_edit"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"></EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            >
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="运动量:"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:id="@+id/exercise_amount"/>
+
+
+            <EditText
+                android:id="@+id/exercise_amount_edit"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"></EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            >
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="空腹血糖mmol/L:"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:id="@+id/fasting_blood_glucose"/>
+
+
+            <EditText
+                android:id="@+id/fasting_blood_glucose_edit"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"></EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            >
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="餐后血糖mmol/L:"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:id="@+id/postprandial_blood_glucose"/>
+
+
+            <EditText
+                android:id="@+id/postprandial_blood_glucose_edit"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"></EditText>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/pi_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="58dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="159dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginEnd="158dp"
+        android:layout_marginBottom="67dp"
+        android:text="确认修改" />
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+

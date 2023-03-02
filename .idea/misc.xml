@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/SeanWong/Desktop/ZhuYe/LHD/Project 2/android_diatetes/app/src/main/res/layout/activity_home.xml" value="0.18342391304347827" />
+        <entry key="..\:/Users/SeanWong/Desktop/ZhuYe/LHD/Project 2/android_diatetes/app/src/main/res/layout/activity_home_doctor.xml" value="0.33" />
+        <entry key="..\:/Users/SeanWong/Desktop/ZhuYe/LHD/Project 2/android_diatetes/app/src/main/res/layout/activity_home_manager.xml" value="0.5" />
+        <entry key="..\:/Users/SeanWong/Desktop/ZhuYe/LHD/Project 2/android_diatetes/app/src/main/res/layout/activity_home_patient.xml" value="0.5" />
+        <entry key="..\:/Users/SeanWong/Desktop/ZhuYe/LHD/Project 2/android_diatetes/app/src/main/res/layout/activity_home_sportsDoctor.xml" value="0.1" />
+        <entry key="..\:/Users/SeanWong/Desktop/ZhuYe/LHD/Project 2/android_diatetes/app/src/main/res/layout/activity_home_sportsdoctor.xml" value="0.5" />
+        <entry key="..\:/Users/SeanWong/Desktop/ZhuYe/LHD/Project 2/android_diatetes/app/src/main/res/layout/activity_login.xml" value="0.3523550724637681" />
+        <entry key="..\:/Users/SeanWong/Desktop/ZhuYe/LHD/Project 2/android_diatetes/app/src/main/res/layout/camera.xml" value="0.1838768115942029" />
+        <entry key="..\:/Users/SeanWong/Desktop/ZhuYe/LHD/Project 2/android_diatetes/app/src/main/res/layout/cart_fragment.xml" value="0.2828125" />
+        <entry key="..\:/Users/SeanWong/Desktop/ZhuYe/LHD/Project 2/android_diatetes/app/src/main/res/layout/center_fragment.xml" value="0.2828125" />
+        <entry key="..\:/Users/SeanWong/Desktop/ZhuYe/LHD/Project 2/android_diatetes/app/src/main/res/layout/home_fragment.xml" value="0.2828125" />
+        <entry key="..\:/Users/SeanWong/Desktop/ZhuYe/LHD/Project 2/android_diatetes/app/src/main/res/layout/order_fragment.xml" value="0.3242753623188406" />
+        <entry key="..\:/Users/SeanWong/Desktop/ZhuYe/LHD/Project 2/android_diatetes/app/src/main/res/xml/filepaths.xml" value="0.1838768115942029" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
