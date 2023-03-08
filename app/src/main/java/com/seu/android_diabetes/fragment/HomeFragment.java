@@ -36,6 +36,7 @@ import com.seu.android_diabetes.utils.SharedPreferencesUtil;
 import com.seu.android_diabetes.vo.PIVO;
 import com.seu.android_diabetes.vo.ServerResponse;
 import com.seu.android_diabetes.vo.UserVO;
+import com.xuexiang.xui.widget.grouplist.XUICommonListItemView;
 //import com.seu.android_diabetes.adapter.MyViewPagerAdapter;
 //import com.seu.android_diabetes.utils.OkHttpCallbackFile;
 //import com.seu.android_diabetes.vo.ProductListVO;
@@ -48,6 +49,10 @@ public class HomeFragment extends Fragment {
     private ViewPager viewPager;
     private List<ImageView> viewList=new ArrayList<>();
     private PagerAdapter pagerAdapter;
+    private XUICommonListItemView xuiCommonListItemView1;
+    private XUICommonListItemView xuiCommonListItemView2;
+    private XUICommonListItemView xuiCommonListItemView3;
+    private XUICommonListItemView xuiCommonListItemView4;
     private  TextView textView1;
     private TextView textView2;
     private TextView textView3;
@@ -62,10 +67,10 @@ public class HomeFragment extends Fragment {
             switch (msg.what){
                 case PI_NOTIFY:
                     PIVO pivo = (PIVO) msg.obj;
-                    editText1.setText(pivo.getVascularAgingDegree().toString());
-                    editText2.setText(pivo.getExerciseAmount().toString());
-                    editText3.setText(pivo.getFastingBloodGlucose().toString());
-                    editText4.setText(pivo.getPostprandialBloodGlucose().toString());
+//                    editText1.setText(pivo.getVascularAgingDegree().toString());
+//                    editText2.setText(pivo.getExerciseAmount().toString());
+//                    editText3.setText(pivo.getFastingBloodGlucose().toString());
+//                    editText4.setText(pivo.getPostprandialBloodGlucose().toString());
                     break;
             }
         }
@@ -140,14 +145,23 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=  inflater.inflate(R.layout.home_fragment,container,false);
-        textView1=view.findViewById(R.id.vascular_aging_degree);
-        textView2=view.findViewById(R.id.exercise_amount);
-        textView3=view.findViewById(R.id.fasting_blood_glucose);
-        textView4=view.findViewById(R.id.postprandial_blood_glucose);
-        editText1=view.findViewById(R.id.vascular_aging_degree_edit);
-        editText2=view.findViewById(R.id.exercise_amount_edit);
-        editText3=view.findViewById(R.id.fasting_blood_glucose_edit);
-        editText4=view.findViewById(R.id.postprandial_blood_glucose_edit);
+        xuiCommonListItemView1=view.findViewById(R.id.vascular_aging_degree);
+        xuiCommonListItemView1.setOrientation(XUICommonListItemView.VERTICAL); //设置布局方向
+        xuiCommonListItemView1.setImageDrawable(getResources().getDrawable(R.drawable.vessel)); //设置左侧图标
+        xuiCommonListItemView1.setText("标题"); //设置主标题
+        xuiCommonListItemView1.setDetailText("副标题"); //设置副标题
+        xuiCommonListItemView1.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+        xuiCommonListItemView1.setAccessoryType(XUICommonListItemView.ACCESSORY_TYPE_CHEVRON); //设置右侧箭头类型
+
+
+//        textView1=view.findViewById(R.id.vascular_aging_degree);
+//        textView2=view.findViewById(R.id.exercise_amount);
+//        textView3=view.findViewById(R.id.fasting_blood_glucose);
+//        textView4=view.findViewById(R.id.postprandial_blood_glucose);
+//        editText1=view.findViewById(R.id.vascular_aging_degree_edit);
+//        editText2=view.findViewById(R.id.exercise_amount_edit);
+//        editText3=view.findViewById(R.id.fasting_blood_glucose_edit);
+//        editText4=view.findViewById(R.id.postprandial_blood_glucose_edit);
         SharedPreferencesUtil util= new SharedPreferencesUtil(getActivity());
         String json = util.readString("user");
 
