@@ -17,17 +17,19 @@ import com.seu.android_diabetes.LoginActivity;
 import com.seu.android_diabetes.R;
 import com.seu.android_diabetes.utils.SharedPreferencesUtil;
 import com.seu.android_diabetes.vo.UserVO;
+import com.xuexiang.xui.widget.textview.supertextview.SuperButton;
 
 public class UserCenterFragment extends Fragment {
 
-    TextView info;
-    Button logout;
+//    TextView info;
+    SuperButton logout;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=  inflater.inflate(R.layout.center_fragment,container,false);
-         info=view.findViewById(R.id.info);
+//         info=view.findViewById(R.id.info);
         logout=view.findViewById(R.id.logout);
+
         return view;
     }
 
@@ -41,7 +43,7 @@ public class UserCenterFragment extends Fragment {
            //已经登录
            //获取用户信息
            UserVO userVO=(UserVO) SharedPreferencesUtil.getInstance(getActivity()).readObject("user", UserVO.class);
-           info.setText(userVO.getUsername());
+//           info.setText(userVO.getUsername());
        }
 
 

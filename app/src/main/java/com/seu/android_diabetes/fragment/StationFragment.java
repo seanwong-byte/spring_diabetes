@@ -23,6 +23,7 @@ import com.seu.android_diabetes.utils.OkHttpCallback;
 import com.seu.android_diabetes.utils.OkHttpUtils;
 import com.seu.android_diabetes.vo.DiabetesUser;
 import com.seu.android_diabetes.vo.ServerResponse;
+import com.xuexiang.xui.widget.grouplist.XUICommonListItemView;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -40,6 +41,11 @@ private TextView sugar_control_rate;
 private TextView patient_number;
 private TextView doctor_number;
 private TextView therapist_number;
+
+    private XUICommonListItemView xuiCommonListItemView1;
+    private XUICommonListItemView xuiCommonListItemView2;
+    private XUICommonListItemView xuiCommonListItemView3;
+    private XUICommonListItemView xuiCommonListItemView4;
 static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
 private Handler handler = new Handler(){
     @Override
@@ -48,10 +54,10 @@ private Handler handler = new Handler(){
             case 1:
                 List<String> list = new ArrayList<>();
                 list = (List<String>) msg.obj;
-                sugar_control_rate.append(list.get(0));
-                patient_number.append(list.get(1));
-                doctor_number.append(list.get(2));
-                therapist_number.append(list.get(3));
+                xuiCommonListItemView1.setDetailText(list.get(0));
+                xuiCommonListItemView2.setDetailText(list.get(1));
+                xuiCommonListItemView3.setDetailText(list.get(2));
+                xuiCommonListItemView4.setDetailText(list.get(3));
                 break;
         }
     }
@@ -61,10 +67,48 @@ private Handler handler = new Handler(){
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=  inflater.inflate(R.layout.admin_station_fragment,container,false);
-        sugar_control_rate = view.findViewById(R.id.sugar_rate);
-        patient_number = view.findViewById(R.id.patient_number);
-        doctor_number = view.findViewById(R.id.doctor_number);
-        therapist_number = view.findViewById(R.id.therapist_number);
+
+        xuiCommonListItemView1=view.findViewById(R.id.sugar_rate);
+        xuiCommonListItemView1.setOrientation(XUICommonListItemView.HORIZONTAL); //设置布局方向
+        xuiCommonListItemView1.setImageDrawable(getResources().getDrawable(R.drawable.sugar_rate)); //设置左侧图标
+        xuiCommonListItemView1.setText("控糖率"); //设置主标题
+        xuiCommonListItemView1.setDetailText("未设置"); //设置副标题
+        xuiCommonListItemView1.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+        xuiCommonListItemView1.setAccessoryType(XUICommonListItemView.ACCESSORY_TYPE_NONE); //设置右侧箭头类型
+
+
+
+        xuiCommonListItemView2=view.findViewById(R.id.patient_number);
+        xuiCommonListItemView2.setOrientation(XUICommonListItemView.HORIZONTAL); //设置布局方向
+        xuiCommonListItemView2.setImageDrawable(getResources().getDrawable(R.drawable.patient_volume)); //设置左侧图标
+        xuiCommonListItemView2.setText("患者数"); //设置主标题
+        xuiCommonListItemView2.setDetailText("未设置"); //设置副标题
+        xuiCommonListItemView2.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+        xuiCommonListItemView2.setAccessoryType(XUICommonListItemView.ACCESSORY_TYPE_NONE); //设置右侧箭头类型
+
+        xuiCommonListItemView3=view.findViewById(R.id.doctor_number);
+        xuiCommonListItemView3.setOrientation(XUICommonListItemView.HORIZONTAL); //设置布局方向
+        xuiCommonListItemView3.setImageDrawable(getResources().getDrawable(R.drawable.doctor_volume)); //设置左侧图标
+        xuiCommonListItemView3.setText("医生数"); //设置主标题
+        xuiCommonListItemView3.setDetailText("未设置"); //设置副标题
+        xuiCommonListItemView3.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+        xuiCommonListItemView3.setAccessoryType(XUICommonListItemView.ACCESSORY_TYPE_NONE); //设置右侧箭头类型
+
+        xuiCommonListItemView4=view.findViewById(R.id.therapist_number);
+        xuiCommonListItemView4.setOrientation(XUICommonListItemView.HORIZONTAL); //设置布局方向
+        xuiCommonListItemView4.setImageDrawable(getResources().getDrawable(R.drawable.therapist_volume)); //设置左侧图标
+        xuiCommonListItemView4.setText("运动康复师数"); //设置主标题
+        xuiCommonListItemView4.setDetailText("未设置"); //设置副标题
+        xuiCommonListItemView4.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+        xuiCommonListItemView4.setAccessoryType(XUICommonListItemView.ACCESSORY_TYPE_NONE); //设置右侧箭头类型
+
+
+
+
+//        sugar_control_rate = view.findViewById(R.id.sugar_rate);
+//        patient_number = view.findViewById(R.id.patient_number);
+//        doctor_number = view.findViewById(R.id.doctor_number);
+//        therapist_number = view.findViewById(R.id.therapist_number);
 
         // 设置数据库参数
         String dbUrl = "jdbc:mysql://"+serverIp+":3306/shopping?characterEncoding=utf8&serverTimezone=Asia/Shanghai";

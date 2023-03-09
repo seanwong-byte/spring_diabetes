@@ -53,24 +53,24 @@ public class HomeFragment extends Fragment {
     private XUICommonListItemView xuiCommonListItemView2;
     private XUICommonListItemView xuiCommonListItemView3;
     private XUICommonListItemView xuiCommonListItemView4;
-    private  TextView textView1;
-    private TextView textView2;
-    private TextView textView3;
-    private TextView textView4;
-    private EditText editText1;
-    private EditText editText2;
-    private  EditText editText3;
-    private EditText editText4;
+//    private  TextView textView1;
+//    private TextView textView2;
+//    private TextView textView3;
+//    private TextView textView4;
+//    private EditText editText1;
+//    private EditText editText2;
+//    private  EditText editText3;
+//    private EditText editText4;
     private Handler handler = new Handler(){
         @Override
         public void handleMessage(@NonNull Message msg) {
             switch (msg.what){
                 case PI_NOTIFY:
                     PIVO pivo = (PIVO) msg.obj;
-//                    editText1.setText(pivo.getVascularAgingDegree().toString());
-//                    editText2.setText(pivo.getExerciseAmount().toString());
-//                    editText3.setText(pivo.getFastingBloodGlucose().toString());
-//                    editText4.setText(pivo.getPostprandialBloodGlucose().toString());
+                      xuiCommonListItemView1.setDetailText(pivo.getVascularAgingDegree().toString());
+                      xuiCommonListItemView2.setDetailText(pivo.getExerciseAmount().toString());
+                      xuiCommonListItemView3.setDetailText(pivo.getFastingBloodGlucose().toString());
+                      xuiCommonListItemView4.setDetailText(pivo.getPostprandialBloodGlucose().toString());
                     break;
             }
         }
@@ -148,10 +148,58 @@ public class HomeFragment extends Fragment {
         xuiCommonListItemView1=view.findViewById(R.id.vascular_aging_degree);
         xuiCommonListItemView1.setOrientation(XUICommonListItemView.VERTICAL); //设置布局方向
         xuiCommonListItemView1.setImageDrawable(getResources().getDrawable(R.drawable.vessel)); //设置左侧图标
-        xuiCommonListItemView1.setText("标题"); //设置主标题
-        xuiCommonListItemView1.setDetailText("副标题"); //设置副标题
+        xuiCommonListItemView1.setText("血管老化程度"); //设置主标题
+        xuiCommonListItemView1.setDetailText("未设置"); //设置副标题
         xuiCommonListItemView1.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
         xuiCommonListItemView1.setAccessoryType(XUICommonListItemView.ACCESSORY_TYPE_CHEVRON); //设置右侧箭头类型
+
+
+        xuiCommonListItemView2=view.findViewById(R.id.exercise_amount);
+        xuiCommonListItemView2.setOrientation(XUICommonListItemView.VERTICAL); //设置布局方向
+        xuiCommonListItemView2.setImageDrawable(getResources().getDrawable(R.drawable.sprots_volume)); //设置左侧图标
+        xuiCommonListItemView2.setText("运动量"); //设置主标题
+        xuiCommonListItemView2.setDetailText("未设置"); //设置副标题
+        xuiCommonListItemView2.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+        xuiCommonListItemView2.setAccessoryType(XUICommonListItemView.ACCESSORY_TYPE_CHEVRON); //设置右侧箭头类型
+
+        xuiCommonListItemView3=view.findViewById(R.id.fasting_blood_glucose);
+        xuiCommonListItemView3.setOrientation(XUICommonListItemView.VERTICAL); //设置布局方向
+        xuiCommonListItemView3.setImageDrawable(getResources().getDrawable(R.drawable.beforediet_blood_glucose)); //设置左侧图标
+        xuiCommonListItemView3.setText("空腹血糖mmol/L"); //设置主标题
+        xuiCommonListItemView3.setDetailText("未设置"); //设置副标题
+        xuiCommonListItemView3.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+        xuiCommonListItemView3.setAccessoryType(XUICommonListItemView.ACCESSORY_TYPE_CHEVRON); //设置右侧箭头类型
+
+        xuiCommonListItemView4=view.findViewById(R.id.postprandial_blood_glucose);
+        xuiCommonListItemView4.setOrientation(XUICommonListItemView.VERTICAL); //设置布局方向
+        xuiCommonListItemView4.setImageDrawable(getResources().getDrawable(R.drawable.afterdiet_blood_glucose)); //设置左侧图标
+        xuiCommonListItemView4.setText("餐后血糖mmol/L"); //设置主标题
+        xuiCommonListItemView4.setDetailText("未设置"); //设置副标题
+        xuiCommonListItemView4.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+        xuiCommonListItemView4.setAccessoryType(XUICommonListItemView.ACCESSORY_TYPE_CHEVRON); //设置右侧箭头类型
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //        textView1=view.findViewById(R.id.vascular_aging_degree);

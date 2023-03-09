@@ -86,19 +86,62 @@
 
             >
 
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="运动量:"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                android:id="@+id/exercise_amount"/>
+            <com.xuexiang.xui.widget.grouplist.XUICommonListItemView
+                android:id="@+id/exercise_amount"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.295" />
+
+<!--            <TextView-->
+<!--                android:layout_width="150dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="运动量:"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="20dp"-->
+<!--                android:id="@+id/exercise_amount"/>-->
 
 
-            <EditText
-                android:id="@+id/exercise_amount_edit"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"></EditText>
+<!--            <EditText-->
+<!--                android:id="@+id/exercise_amount_edit"-->
+<!--                android:layout_width="200dp"-->
+<!--                android:layout_height="wrap_content"></EditText>-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            >
+
+            <com.xuexiang.xui.widget.grouplist.XUICommonListItemView
+                android:id="@+id/fasting_blood_glucose"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.295" />
+
+<!--            <TextView-->
+<!--                android:layout_width="160dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="空腹血糖mmol/L:"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="20dp"-->
+<!--                android:id="@+id/fasting_blood_glucose"/>-->
+
+
+<!--            <EditText-->
+<!--                android:id="@+id/fasting_blood_glucose_edit"-->
+<!--                android:layout_width="200dp"-->
+<!--                android:layout_height="wrap_content"></EditText>-->
 
         </LinearLayout>
 
@@ -108,60 +151,37 @@
 
             >
 
-            <TextView
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                android:text="空腹血糖mmol/L:"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                android:id="@+id/fasting_blood_glucose"/>
+            <com.xuexiang.xui.widget.grouplist.XUICommonListItemView
+                android:id="@+id/postprandial_blood_glucose"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.295" />
+
+<!--            <TextView-->
+<!--                android:layout_width="160dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="餐后血糖mmol/L:"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="20dp"-->
+<!--                android:id="@+id/postprandial_blood_glucose"/>-->
 
 
-            <EditText
-                android:id="@+id/fasting_blood_glucose_edit"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"></EditText>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-
-            >
-
-            <TextView
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                android:text="餐后血糖mmol/L:"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                android:id="@+id/postprandial_blood_glucose"/>
-
-
-            <EditText
-                android:id="@+id/postprandial_blood_glucose_edit"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"></EditText>
+<!--            <EditText-->
+<!--                android:id="@+id/postprandial_blood_glucose_edit"-->
+<!--                android:layout_width="200dp"-->
+<!--                android:layout_height="wrap_content"></EditText>-->
 
         </LinearLayout>
 
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/pi_bt"
-        android:layout_width="wrap_content"
-        android:layout_height="58dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="bottom"
-        android:layout_marginStart="159dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginEnd="158dp"
-        android:layout_marginBottom="67dp"
-        android:text="确认修改" />
+
 
 </RelativeLayout>
 

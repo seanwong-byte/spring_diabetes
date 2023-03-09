@@ -2,40 +2,88 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
+    <com.xuexiang.xui.widget.grouplist.XUICommonListItemView
+        android:id="@+id/sugar_rate"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="控糖率:"
-        android:textSize="30dp"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:id="@+id/sugar_rate"/>
-    <TextView
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.295" />
+
+    <com.xuexiang.xui.widget.grouplist.XUICommonListItemView
+        android:id="@+id/patient_number"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="患者数:"
-        android:textSize="30dp"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:id="@+id/patient_number"/>
-    <TextView
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.295" />
+
+    <com.xuexiang.xui.widget.grouplist.XUICommonListItemView
+        android:id="@+id/doctor_number"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="医生数:"
-        android:textSize="30dp"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:id="@+id/doctor_number"/>
-    <TextView
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.295" />
+
+    <com.xuexiang.xui.widget.grouplist.XUICommonListItemView
+        android:id="@+id/therapist_number"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="运动康复师数:"
-        android:textSize="30dp"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:id="@+id/therapist_number"/>
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.295" />
+
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="控糖率:"-->
+<!--        android:textSize="30dp"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:id="@+id/sugar_rate"/>-->
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="患者数:"-->
+<!--        android:textSize="30dp"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:id="@+id/patient_number"/>-->
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="医生数:"-->
+<!--        android:textSize="30dp"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:id="@+id/doctor_number"/>-->
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="运动康复师数:"-->
+<!--        android:textSize="30dp"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:id="@+id/therapist_number"/>-->
 
 </LinearLayout>
