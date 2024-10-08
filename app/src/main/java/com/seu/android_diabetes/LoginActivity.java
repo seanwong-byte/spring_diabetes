@@ -67,7 +67,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
 
 
-        //获取手机号和密码
 
         username_editText=findViewById(R.id.et_phone_number);
         password_editText=findViewById(R.id.et_verify_code);
