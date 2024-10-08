@@ -60,7 +60,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         String username = sharedPreferences.getString("username","");
         String password = sharedPreferences.getString("passwor","");
 
-
+//设置图标位置
         IconImageView iconImageView = findViewById(R.id.login_icon);
         iconImageView.setImageResource(R.mipmap.app_icon);
 
