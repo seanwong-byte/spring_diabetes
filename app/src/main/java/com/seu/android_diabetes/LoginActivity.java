@@ -58,7 +58,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 //        SharedPreferences sharedPreferences =this.getSharedPreferences("logininfo", Context.MODE_PRIVATE);
         SharedPreferences sharedPreferences = getSharedPreferences("logininfo",Context.MODE_PRIVATE);
         String username = sharedPreferences.getString("username","");
-        String password = sharedPreferences.getString("password","");
+        String password = sharedPreferences.getString("pssword","");
 
 
         IconImageView iconImageView = findViewById(R.id.login_icon);
