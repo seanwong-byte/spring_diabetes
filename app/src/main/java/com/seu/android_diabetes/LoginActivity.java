@@ -56,7 +56,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 //        SharedPreferences sharedPreferences =this.getSharedPreferences("logininfo", Context.MODE_PRIVATE);
-        SharedPreferences sharedPreferences = getSharedPreferences("logininfo",Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences("ogininfo",Context.MODE_PRIVATE);
         String username = sharedPreferences.getString("username","");
         String password = sharedPreferences.getString("password","");
 
