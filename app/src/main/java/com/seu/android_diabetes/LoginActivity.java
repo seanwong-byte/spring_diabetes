@@ -56,7 +56,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 //        SharedPreferences sharedPreferences =this.getSharedPreferences("logininfo", Context.MODE_PRIVATE);
-        SharedPreferences sharedPreferences = getSharedPreferences("logininfo",Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences("logininf",Context.MODE_PRIVATE);
         String username = sharedPreferences.getString("username","");
         String password = sharedPreferences.getString("pssword","");
 
@@ -67,6 +67,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
 
 
+        //获取手机号和密码
 
         username_editText=findViewById(R.id.et_phone_number);
         password_editText=findViewById(R.id.et_verify_code);
